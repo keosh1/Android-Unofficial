@@ -13,7 +13,8 @@ Vue.config.productionTip = false;
 // Configure Simple Analytics
 Vue.use(SimpleAnalytics, { 
     skip: process.env.NODE_ENV !== "production",
-    domain: process.env.VUE_APP_SA_DOMAIN 
+    domain: process.env.VUE_APP_SA_DOMAIN,
+    src: "https://scripts.simpleanalyticscdn.com/latest.js"
 });
 
 Vue.mixin({
