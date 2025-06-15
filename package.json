@@ -12,6 +12,7 @@
         "@sentry/vue": "^6.1.0",
         "android-fastboot": "git+https://github.com/agam778/fastboot.js.git",
         "core-js": "^3.6.5",
+        "simple-analytics-vue": "^3.0.2",
         "vue": "^2.6.11",
         "vuetify": "^2.4.0"
     },

@@ -6,8 +6,15 @@ import * as common from "./core/common";
 import * as errors from "./core/errors";
 import * as Sentry from "@sentry/vue";
 import { Integrations } from "@sentry/tracing";
+import SimpleAnalytics from "simple-analytics-vue";
 
 Vue.config.productionTip = false;
+
+// Configure Simple Analytics
+Vue.use(SimpleAnalytics, { 
+    skip: process.env.NODE_ENV !== "production",
+    domain: process.env.VUE_APP_SA_DOMAIN 
+});
 
 Vue.mixin({
     methods: {

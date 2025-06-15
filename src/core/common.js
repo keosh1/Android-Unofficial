@@ -12,11 +12,8 @@ export function setDebugMode(mode) {
 
 export function logEvent(event, callback) {
     console.log("Event:", event);
-    if (
-        window.sa_event &&
-        process.env.NODE_ENV === "production" &&
-        process.env.VUE_APP_SA_DOMAIN !== undefined
-    ) {
+    // The Simple Analytics Vue plugin handles the production check and domain validation automatically
+    if (window.sa_event) {
         window.sa_event(event, callback);
     } else if (callback !== undefined) {
         callback();
